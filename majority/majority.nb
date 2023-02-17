@@ -1,0 +1,3411 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    171929,       3403]
+NotebookOptionsPosition[    169065,       3348]
+NotebookOutlinePosition[    169461,       3364]
+CellTagsIndexPosition[    169418,       3361]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"toGraphicsList", "[", "xs_List", "]"}], " ", ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", " ", 
+      RowBox[{"Graphics", "[", 
+       RowBox[{"{", 
+        RowBox[{"#", ",", " ", 
+         RowBox[{"EdgeForm", "[", 
+          RowBox[{"{", 
+           RowBox[{"Thin", ",", " ", "Black"}], "}"}], "]"}], ",", " ", 
+         RowBox[{"Disk", "[", "]"}]}], "}"}], "]"}], ")"}], "&"}], " ", "/@", 
+    "xs"}]}]}]], "Input",
+ CellChangeTimes->{{3.885587607037736*^9, 3.8855876306085167`*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"8655b382-22b9-4a39-bff6-ac4b0844ba3d"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"toGraphicsRow", "[", "ms_List", "]"}], " ", ":=", 
+  RowBox[{"Join", "[", 
+   RowBox[{
+    RowBox[{"toGraphicsList", "[", 
+     RowBox[{"Reverse", "[", 
+      RowBox[{"ms", "[", 
+       RowBox[{"[", "1", "]"}], "]"}], "]"}], "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"Graphics", "[", 
+      RowBox[{"{", 
+       RowBox[{"White", ",", " ", 
+        RowBox[{"EdgeForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"Thick", ",", " ", "Black"}], "}"}], "]"}], ",", " ", 
+        RowBox[{"Rectangle", "[", "]"}]}], "}"}], "]"}], "}"}], ",", " ", 
+    RowBox[{"toGraphicsList", "[", 
+     RowBox[{"ms", "[", 
+      RowBox[{"[", "2", "]"}], "]"}], "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.787628202456159*^9, 3.787628234336294*^9}, 
+   3.7876282679074078`*^9, {3.8855496433694563`*^9, 3.885549644832383*^9}, {
+   3.8855497400436993`*^9, 3.885549741917664*^9}, {3.88554980529268*^9, 
+   3.885549805776894*^9}, {3.8855874168640423`*^9, 3.885587420453313*^9}, {
+   3.885587640292159*^9, 3.885587655593305*^9}, {3.8855877188775883`*^9, 
+   3.885587737666059*^9}, {3.8855877764176197`*^9, 3.88558782469247*^9}, {
+   3.885587918511571*^9, 3.8855879476842413`*^9}, {3.8855880480668373`*^9, 
+   3.885588150427847*^9}, 3.885592603608227*^9, {3.885592653678206*^9, 
+   3.885592705701269*^9}, {3.8855928099924717`*^9, 3.885592817403994*^9}, {
+   3.885593702928788*^9, 3.88559370336226*^9}, {3.8855941960832148`*^9, 
+   3.885594223173151*^9}, {3.8855942611937447`*^9, 3.88559426195578*^9}},
+ CellLabel->"In[62]:=",ExpressionUUID->"5a0da9cb-2341-400f-8045-b72e14b9657c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"toGraphicsRow", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"RandomChoice", "[", 
+      RowBox[{"{", 
+       RowBox[{"Red", ",", " ", "White", ",", " ", "Blue"}], "}"}], "]"}], 
+     ",", " ", "5"}], "]"}], ",", " ", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"RandomChoice", "[", 
+      RowBox[{"{", 
+       RowBox[{"Green", ",", " ", "Orange", ",", " ", "Yellow"}], "}"}], 
+      "]"}], ",", " ", "5"}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.885587837961896*^9, 3.885587865689402*^9}},
+ CellLabel->"In[20]:=",ExpressionUUID->"d5f052fd-cd72-43d0-a124-1b5c247c01e3"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {InsetBox[
+     GraphicsBox[
+      {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+       DiskBox[{0, 0}]},
+      DisplayFunction->Identity,
+      ImagePadding->{{2.842170943040401*^-14, 1.}, {1.0000000000001137`, 
+       2.842170943040401*^-14}}], {29.772727272727224, -28.636363636363647}, 
+     ImageScaled[{0.5, 0.5}], {54.545454545454454, 54.54545454545457}], 
+    InsetBox[
+     GraphicsBox[
+      {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+       DiskBox[{0, 0}]},
+      DisplayFunction->Identity,
+      ImagePadding->{{2.842170943040401*^-14, 1.}, {1.0000000000001137`, 
+       2.842170943040401*^-14}}], {89.31818181818167, -28.636363636363647}, 
+     ImageScaled[{0.5, 0.5}], {54.545454545454454, 54.54545454545457}], 
+    InsetBox[
+     GraphicsBox[
+      {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+       DiskBox[{0, 0}]},
+      DisplayFunction->Identity,
+      ImagePadding->{{2.842170943040401*^-14, 1.}, {1.0000000000001137`, 
+       2.842170943040401*^-14}}], {148.86363636363612, -28.636363636363647}, 
+     ImageScaled[{0.5, 0.5}], {54.545454545454454, 54.54545454545457}], 
+    InsetBox[
+     GraphicsBox[
+      {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+       DiskBox[{0, 0}]},
+      DisplayFunction->Identity,
+      ImagePadding->{{2.842170943040401*^-14, 1.}, {1.0000000000001137`, 
+       2.842170943040401*^-14}}], {208.40909090909057, -28.636363636363647}, 
+     ImageScaled[{0.5, 0.5}], {54.545454545454454, 54.54545454545457}], 
+    InsetBox[
+     GraphicsBox[
+      {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+       DiskBox[{0, 0}]},
+      DisplayFunction->Identity,
+      ImagePadding->{{2.842170943040401*^-14, 1.}, {1.0000000000001137`, 
+       2.842170943040401*^-14}}], {267.95454545454504, -28.636363636363647}, 
+     ImageScaled[{0.5, 0.5}], {54.545454545454454, 54.54545454545457}], 
+    InsetBox[
+     GraphicsBox[
+      {GrayLevel[0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+       InsetBox["\<\"<->\"\>", {0, 0}]},
+      DisplayFunction->Identity,
+      ImagePadding->{{0., 1.0000000000000568`}, {1.0000000000001137`, 
+       2.842170943040401*^-14}}], {327.49999999999943, -28.636363636363647}, 
+     ImageScaled[{0.5, 0.5}], {54.54545454545448, 54.54545454545457}], 
+    InsetBox[
+     GraphicsBox[
+      {RGBColor[1, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+       DiskBox[{0, 0}]},
+      DisplayFunction->Identity,
+      ImagePadding->{{2.842170943040401*^-14, 1.}, {1.0000000000001137`, 
+       2.842170943040401*^-14}}], {387.04545454545394, -28.636363636363647}, 
+     ImageScaled[{0.5, 0.5}], {54.545454545454454, 54.54545454545457}], 
+    InsetBox[
+     GraphicsBox[
+      {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+       DiskBox[{0, 0}]},
+      DisplayFunction->Identity,
+      ImagePadding->{{2.842170943040401*^-14, 1.}, {1.0000000000001137`, 
+       2.842170943040401*^-14}}], {446.5909090909083, -28.636363636363647}, 
+     ImageScaled[{0.5, 0.5}], {54.545454545454454, 54.54545454545457}], 
+    InsetBox[
+     GraphicsBox[
+      {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+       DiskBox[{0, 0}]},
+      DisplayFunction->Identity,
+      ImagePadding->{{2.842170943040401*^-14, 1.}, {1.0000000000001137`, 
+       2.842170943040401*^-14}}], {506.13636363636283, -28.636363636363647}, 
+     ImageScaled[{0.5, 0.5}], {54.545454545454454, 54.54545454545457}], 
+    InsetBox[
+     GraphicsBox[
+      {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+       DiskBox[{0, 0}]},
+      DisplayFunction->Identity,
+      ImagePadding->{{2.842170943040401*^-14, 1.}, {1.0000000000001137`, 
+       2.842170943040401*^-14}}], {565.6818181818173, -28.636363636363647}, 
+     ImageScaled[{0.5, 0.5}], {54.545454545454454, 54.54545454545457}], 
+    InsetBox[
+     GraphicsBox[
+      {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+       DiskBox[{0, 0}]},
+      DisplayFunction->Identity,
+      ImagePadding->{{2.842170943040401*^-14, 1.}, {1.0000000000001137`, 
+       2.842170943040401*^-14}}], {625.2272727272718, -28.636363636363647}, 
+     ImageScaled[{0.5, 0.5}], {54.545454545454454, 54.54545454545457}]}, {}},
+  ImageSize->{
+    UpTo[600], 
+    UpTo[450]},
+  PlotRange->{{0, 654.9999999999991}, {-57.272727272727295`, 0}},
+  PlotRangePadding->{6, 5}]], "Output",
+ CellChangeTimes->{
+  3.88554966216081*^9, 3.8855497470766087`*^9, 3.885549811040922*^9, 
+   3.885587867202177*^9, 3.885587926039654*^9, {3.8855880660468903`*^9, 
+   3.88558808977561*^9}, {3.88558812731244*^9, 3.885588155258439*^9}},
+ CellLabel->"Out[20]=",ExpressionUUID->"a1c3450b-c8d5-4d15-b2bc-ee7c3b9cb9d1"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"majority", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", " ", "ys_List"}], "}"}], "]"}], " ", ":=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", "}"}], ",", " ", "ys"}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.88558844124607*^9, 3.8855884700796824`*^9}, {
+  3.885588791964642*^9, 3.8855888166604156`*^9}, {3.885588884427265*^9, 
+  3.885588918177005*^9}},
+ CellLabel->"In[29]:=",ExpressionUUID->"5f109f3e-a799-4d24-9402-48766698a86f"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"majority", "[", 
+    RowBox[{"{", 
+     RowBox[{"xs_List", ",", " ", 
+      RowBox[{"{", "}"}]}], "}"}], "]"}], " ", ":=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Drop", "[", 
+      RowBox[{"xs", ",", " ", "1"}], "]"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"First", "[", "xs", "]"}], "}"}]}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.8855915530859547`*^9, 3.885591604878805*^9}, {
+  3.885592129846293*^9, 3.885592133480464*^9}},
+ CellLabel->"In[40]:=",ExpressionUUID->"6c8e2d19-c688-464d-84e9-e397c79c932e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"majority", "[", 
+    RowBox[{"{", 
+     RowBox[{"xs_List", ",", " ", "ys_List"}], "}"}], "]"}], ":=", " ", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"x", ",", " ", "y"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"x", " ", "=", " ", 
+       RowBox[{"First", "[", "xs", "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"y", " ", "=", " ", 
+       RowBox[{"First", "[", "ys", "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"SameQ", "[", 
+         RowBox[{"x", ",", " ", "y"}], "]"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Drop", "[", 
+           RowBox[{"xs", ",", " ", "1"}], "]"}], ",", " ", 
+          RowBox[{"Prepend", "[", 
+           RowBox[{"ys", ",", " ", "x"}], "]"}]}], "}"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Drop", "[", 
+           RowBox[{"xs", ",", " ", "1"}], "]"}], ",", " ", 
+          RowBox[{"Drop", "[", 
+           RowBox[{"ys", ",", " ", "1"}], "]"}]}], "}"}]}], "]"}]}]}], 
+    "\[IndentingNewLine]", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.885588922366027*^9, 3.885588941591649*^9}, {
+   3.885589036416594*^9, 3.885589152625564*^9}, {3.8855898512468643`*^9, 
+   3.885589852086116*^9}, {3.8855898873113747`*^9, 3.885589912543145*^9}, {
+   3.885591274525902*^9, 3.8855912955187397`*^9}, {3.885591331734033*^9, 
+   3.885591346743297*^9}, 3.885591473160568*^9, 3.885591634142325*^9, {
+   3.885592284162595*^9, 3.885592289411858*^9}},
+ CellLabel->"In[45]:=",ExpressionUUID->"3842eff6-1726-4882-ae2c-1039f8f8fad8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"majority", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"Red", ",", " ", "Red", ",", " ", "Blue"}], "}"}], ",", " ", 
+    RowBox[{"{", "}"}]}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.885591482805779*^9, 3.885591502956085*^9}, {
+  3.885591779555232*^9, 3.885591783391284*^9}},
+ CellLabel->"In[33]:=",ExpressionUUID->"f91a8300-ed3f-4748-847f-a18c22845d25"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     InterpretationBox[
+      ButtonBox[
+       TooltipBox[
+        GraphicsBox[{
+          {GrayLevel[0], RectangleBox[{0, 0}]}, 
+          {GrayLevel[0], RectangleBox[{1, -1}]}, 
+          {RGBColor[1, 0, 0], RectangleBox[{0, -1}, {2, 1}]}},
+         AspectRatio->1,
+         DefaultBaseStyle->"ColorSwatchGraphics",
+         Frame->True,
+         FrameStyle->RGBColor[0.6666666666666666, 0., 0.],
+         FrameTicks->None,
+         ImageSize->
+          Dynamic[{
+           Automatic, 
+            1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+             Magnification])}],
+         PlotRangePadding->None],
+        StyleBox[
+         RowBox[{"RGBColor", "[", 
+           RowBox[{"1", ",", "0", ",", "0"}], "]"}], NumberMarks -> False]],
+       Appearance->None,
+       BaseStyle->{},
+       BaselinePosition->Baseline,
+       ButtonFunction:>With[{Typeset`box$ = EvaluationBox[]}, 
+         If[
+          Not[
+           AbsoluteCurrentValue["Deployed"]], 
+          SelectionMove[Typeset`box$, All, Expression]; 
+          FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
+          FrontEnd`Private`$ColorSelectorInitialColor = RGBColor[1, 0, 0]; 
+          FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
+          MathLink`CallFrontEnd[
+            FrontEnd`AttachCell[Typeset`box$, 
+             FrontEndResource["RGBColorValueSelector"], {0, {Left, Bottom}}, {
+             Left, Top}, 
+             "ClosingActions" -> {
+              "SelectionDeparture", "ParentChanged", "EvaluatorQuit"}]]]],
+       DefaultBaseStyle->{},
+       Evaluator->Automatic,
+       Method->"Preemptive"],
+      RGBColor[1, 0, 0],
+      Editable->False,
+      Selectable->False], ",", 
+     InterpretationBox[
+      ButtonBox[
+       TooltipBox[
+        GraphicsBox[{
+          {GrayLevel[0], RectangleBox[{0, 0}]}, 
+          {GrayLevel[0], RectangleBox[{1, -1}]}, 
+          {RGBColor[0, 0, 1], RectangleBox[{0, -1}, {2, 1}]}},
+         AspectRatio->1,
+         DefaultBaseStyle->"ColorSwatchGraphics",
+         Frame->True,
+         FrameStyle->RGBColor[0., 0., 0.6666666666666666],
+         FrameTicks->None,
+         ImageSize->
+          Dynamic[{
+           Automatic, 
+            1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+             Magnification])}],
+         PlotRangePadding->None],
+        StyleBox[
+         RowBox[{"RGBColor", "[", 
+           RowBox[{"0", ",", "0", ",", "1"}], "]"}], NumberMarks -> False]],
+       Appearance->None,
+       BaseStyle->{},
+       BaselinePosition->Baseline,
+       ButtonFunction:>With[{Typeset`box$ = EvaluationBox[]}, 
+         If[
+          Not[
+           AbsoluteCurrentValue["Deployed"]], 
+          SelectionMove[Typeset`box$, All, Expression]; 
+          FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
+          FrontEnd`Private`$ColorSelectorInitialColor = RGBColor[0, 0, 1]; 
+          FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
+          MathLink`CallFrontEnd[
+            FrontEnd`AttachCell[Typeset`box$, 
+             FrontEndResource["RGBColorValueSelector"], {0, {Left, Bottom}}, {
+             Left, Top}, 
+             "ClosingActions" -> {
+              "SelectionDeparture", "ParentChanged", "EvaluatorQuit"}]]]],
+       DefaultBaseStyle->{},
+       Evaluator->Automatic,
+       Method->"Preemptive"],
+      RGBColor[0, 0, 1],
+      Editable->False,
+      Selectable->False]}], "}"}], ",", 
+   InterpretationBox[
+    ButtonBox[
+     TooltipBox[
+      GraphicsBox[{
+        {GrayLevel[0], RectangleBox[{0, 0}]}, 
+        {GrayLevel[0], RectangleBox[{1, -1}]}, 
+        {RGBColor[1, 0, 0], RectangleBox[{0, -1}, {2, 1}]}},
+       AspectRatio->1,
+       DefaultBaseStyle->"ColorSwatchGraphics",
+       Frame->True,
+       FrameStyle->RGBColor[0.6666666666666666, 0., 0.],
+       FrameTicks->None,
+       ImageSize->
+        Dynamic[{
+         Automatic, 
+          1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+           Magnification])}],
+       PlotRangePadding->None],
+      StyleBox[
+       RowBox[{"RGBColor", "[", 
+         RowBox[{"1", ",", "0", ",", "0"}], "]"}], NumberMarks -> False]],
+     Appearance->None,
+     BaseStyle->{},
+     BaselinePosition->Baseline,
+     ButtonFunction:>With[{Typeset`box$ = EvaluationBox[]}, 
+       If[
+        Not[
+         AbsoluteCurrentValue["Deployed"]], 
+        SelectionMove[Typeset`box$, All, Expression]; 
+        FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
+        FrontEnd`Private`$ColorSelectorInitialColor = RGBColor[1, 0, 0]; 
+        FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
+        MathLink`CallFrontEnd[
+          FrontEnd`AttachCell[Typeset`box$, 
+           FrontEndResource["RGBColorValueSelector"], {0, {Left, Bottom}}, {
+           Left, Top}, 
+           "ClosingActions" -> {
+            "SelectionDeparture", "ParentChanged", "EvaluatorQuit"}]]]],
+     DefaultBaseStyle->{},
+     Evaluator->Automatic,
+     Method->"Preemptive"],
+    RGBColor[1, 0, 0],
+    Editable->False,
+    Selectable->False]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.885591505254078*^9, {3.885591592235441*^9, 3.88559161120645*^9}, 
+   3.8855916448905983`*^9, 3.885591784669621*^9},
+ CellLabel->"Out[33]=",ExpressionUUID->"5cdaefd9-c0a0-4d2f-b3d2-34136e4a08e4"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"majorityDone", "[", "ms_List", "]"}], " ", ":=", " ", 
+   RowBox[{
+    RowBox[{"Length", "[", 
+     RowBox[{"ms", "[", 
+      RowBox[{"[", "1", "]"}], "]"}], "]"}], " ", ">", " ", "0"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.885591864111946*^9, 3.885591899052936*^9}, {
+   3.885591964159639*^9, 3.8855919867195177`*^9}, 3.885592018500098*^9},
+ CellLabel->"In[38]:=",ExpressionUUID->"cb81ffd4-a98c-4d64-aa05-96cb6a9a2359"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"toGraphicsRow", "[", "#", "]"}], " ", "&"}], " ", "/@", "  ", 
+   RowBox[{"NestWhileList", "[", 
+    RowBox[{"majority", ",", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "Yellow", ",", " ", "Orange", ",", " ", "Red", ",", " ", "Green", ",",
+          " ", "Red", ",", " ", "Red", ",", " ", "Orange", ",", " ", "Blue", 
+         ",", " ", "Red", ",", " ", "Red", ",", " ", "Red", ",", " ", "Green",
+          ",", " ", "Red"}], "}"}], ",", " ", 
+       RowBox[{"{", "}"}]}], "}"}], ",", " ", "majorityDone"}], "]"}]}], " ", 
+  "//", "GraphicsGrid"}]], "Input",
+ CellChangeTimes->{{3.8855918216146107`*^9, 3.8855918364412603`*^9}, {
+  3.885591905676291*^9, 3.88559190916214*^9}, {3.8855923207654543`*^9, 
+  3.885592330141059*^9}, {3.885592625392434*^9, 3.885592646807909*^9}, {
+  3.885592712944748*^9, 3.8855927488388767`*^9}, {3.885592856956497*^9, 
+  3.885592868109537*^9}, {3.885592901494193*^9, 3.885592919023828*^9}},
+ CellLabel->"In[65]:=",ExpressionUUID->"2a207e29-e9ba-49f2-8afe-897629aacd25"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2558.3999999999996, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2952., -196.8}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3345.5999999999995, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3739.2, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {4132.799999999999, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {4526.4, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {4920., -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {5313.6, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.00000000000006}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.00000000000006}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.00000000000006}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2558.3999999999996, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2952., -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3345.5999999999995, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3739.2, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {4132.799999999999, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {4526.4, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.00000000000006}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {4920., -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.00000000000006}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {5313.6, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.00000000000006}]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.0000000000002}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.0000000000002}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.0000000000002}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2558.3999999999996, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2952., -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3345.5999999999995, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3739.2, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {4132.799999999999, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {4526.4, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.0000000000002}], 
+     TagBox[InsetBox["", {4920., -984.0000000000001}, {Center, Center}, {360., 360.0000000000002}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -984.0000000000001}, {Center, Center}, {360., 360.0000000000002}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2558.3999999999996, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2952., -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3345.5999999999995, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3739.2, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {4132.799999999999, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {4526.4, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], 
+     TagBox[InsetBox["", {4920., -1377.6000000000001}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -1377.6000000000001}, {Center, Center}, {360., 360.}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2558.3999999999996, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2952., -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3345.5999999999995, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {3739.2, -1771.2}, ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}]
+      , 
+     TagBox[InsetBox["", {4132.799999999999, -1771.2}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -1771.2}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -1771.2}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -1771.2}, {Center, Center}, {360., 360.}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.9999999999998}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 359.9999999999998}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 359.9999999999998}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.9999999999998}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.9999999999998}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 359.9999999999998}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2558.3999999999996, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.9999999999998}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2952., -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.9999999999998}], 
+     InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {3345.5999999999995, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.9999999999998}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3739.2, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.9999999999998}], 
+     TagBox[
+      InsetBox["", {4132.799999999999, -2164.7999999999997}, {
+       Center, Center}, {359.99999999999955, 359.9999999999998}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -2164.7999999999997}, {Center, Center}, {360., 359.9999999999998}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -2164.7999999999997}, {Center, Center}, {360., 359.9999999999998}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -2164.7999999999997}, {Center, Center}, {360., 359.9999999999998}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2558.3999999999996, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {2952., -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3345.5999999999995, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3739.2, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.99999999999955}], 
+     TagBox[
+      InsetBox["", {4132.799999999999, -2558.3999999999996}, {
+       Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -2558.3999999999996}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -2558.3999999999996}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -2558.3999999999996}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -2952.}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -2952.}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -2952.}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -2952.}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -2952.}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -2952.}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {2558.3999999999996, -2952.}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2952., -2952.}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.99999999999955}], 
+     TagBox[InsetBox["", {3345.5999999999995, -2952.}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3739.2, -2952.}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4132.799999999999, -2952.}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -2952.}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -2952.}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -2952.}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -3345.5999999999995}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -3345.5999999999995}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -3345.5999999999995}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -3345.5999999999995}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -3345.5999999999995}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {2164.7999999999997, -3345.5999999999995}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 359.99999999999955}], 
+     TagBox[
+      InsetBox["", {2558.3999999999996, -3345.5999999999995}, {
+       Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2952., -3345.5999999999995}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[
+      InsetBox["", {3345.5999999999995, -3345.5999999999995}, {
+       Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3739.2, -3345.5999999999995}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[
+      InsetBox["", {4132.799999999999, -3345.5999999999995}, {
+       Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -3345.5999999999995}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -3345.5999999999995}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -3345.5999999999995}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -3739.2}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -3739.2}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -3739.2}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -3739.2}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {1771.2, -3739.2}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -3739.2}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 359.99999999999955}], 
+     TagBox[InsetBox["", {2558.3999999999996, -3739.2}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2952., -3739.2}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3345.5999999999995, -3739.2}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3739.2, -3739.2}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4132.799999999999, -3739.2}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -3739.2}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -3739.2}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -3739.2}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -4132.799999999999}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -4132.799999999999}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -4132.799999999999}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {1377.6000000000001, -4132.799999999999}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -4132.799999999999}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -4132.799999999999}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 359.99999999999955}], 
+     TagBox[
+      InsetBox["", {2558.3999999999996, -4132.799999999999}, {
+       Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2952., -4132.799999999999}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[
+      InsetBox["", {3345.5999999999995, -4132.799999999999}, {
+       Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3739.2, -4132.799999999999}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[
+      InsetBox["", {4132.799999999999, -4132.799999999999}, {
+       Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -4132.799999999999}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -4132.799999999999}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -4132.799999999999}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -4526.4}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -4526.4}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {984.0000000000001, -4526.4}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -4526.4}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -4526.4}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -4526.4}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 360.}], 
+     TagBox[InsetBox["", {2558.3999999999996, -4526.4}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2952., -4526.4}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3345.5999999999995, -4526.4}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3739.2, -4526.4}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4132.799999999999, -4526.4}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -4526.4}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -4526.4}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -4526.4}, {Center, Center}, {360., 360.}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -4920.}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {590.4000000000001, -4920.}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -4920.}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -4920.}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], 
+     TagBox[InsetBox["", {1771.2, -4920.}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2164.7999999999997, -4920.}, {Center, Center}, {359.9999999999998, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2558.3999999999996, -4920.}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2952., -4920.}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3345.5999999999995, -4920.}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3739.2, -4920.}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4132.799999999999, -4920.}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -4920.}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -4920.}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -4920.}, {Center, Center}, {360., 360.}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {196.8, -5313.6}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -5313.6}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -5313.6}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -5313.6}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], 
+     TagBox[InsetBox["", {1771.2, -5313.6}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2164.7999999999997, -5313.6}, {Center, Center}, {359.9999999999998, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2558.3999999999996, -5313.6}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2952., -5313.6}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3345.5999999999995, -5313.6}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3739.2, -5313.6}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4132.799999999999, -5313.6}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -5313.6}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -5313.6}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -5313.6}, {Center, Center}, {360., 360.}],
+      "InsetString"]}}, {}},
+  ImageSize->Automatic,
+  PlotRangePadding->{6, 5}]], "Output",
+ CellChangeTimes->{
+  3.885591910158085*^9, 3.8855919716773367`*^9, 3.885592022817553*^9, 
+   3.885592140260901*^9, 3.8855922947391977`*^9, 3.8855923314147177`*^9, {
+   3.885592739826581*^9, 3.8855927582047358`*^9}, 3.885592821649474*^9, 
+   3.885592868970459*^9, 3.885592919883048*^9, 3.8855937130400467`*^9, 
+   3.8855942299489717`*^9, 3.8855942656498423`*^9, 3.885594297801133*^9},
+ CellLabel->"Out[65]=",ExpressionUUID->"6ebfecd0-e891-43ab-8ab2-3061ea41dd51"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{"%65", ",", 
+   RowBox[{"Background", "\[Rule]", "None"}]}], "]"}]], "Input",
+ NumberMarks->False,
+ CellLabel->"In[68]:=",ExpressionUUID->"def67c18-bc40-4589-a5a8-21bc9c6fd6ad"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2558.3999999999996, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2952., -196.8}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3345.5999999999995, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3739.2, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {4132.799999999999, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {4526.4, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {4920., -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {5313.6, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.00000000000006}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.00000000000006}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.00000000000006}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2558.3999999999996, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2952., -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3345.5999999999995, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3739.2, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {4132.799999999999, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {4526.4, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.00000000000006}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {4920., -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.00000000000006}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {5313.6, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.00000000000006}]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.0000000000002}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.0000000000002}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.0000000000002}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2558.3999999999996, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2952., -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3345.5999999999995, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3739.2, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {4132.799999999999, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {4526.4, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.0000000000002}], 
+     TagBox[InsetBox["", {4920., -984.0000000000001}, {Center, Center}, {360., 360.0000000000002}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -984.0000000000001}, {Center, Center}, {360., 360.0000000000002}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2558.3999999999996, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2952., -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3345.5999999999995, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3739.2, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {4132.799999999999, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {4526.4, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], 
+     TagBox[InsetBox["", {4920., -1377.6000000000001}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -1377.6000000000001}, {Center, Center}, {360., 360.}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2558.3999999999996, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2952., -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3345.5999999999995, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {3739.2, -1771.2}, ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}]
+      , 
+     TagBox[InsetBox["", {4132.799999999999, -1771.2}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -1771.2}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -1771.2}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -1771.2}, {Center, Center}, {360., 360.}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.9999999999998}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 359.9999999999998}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 359.9999999999998}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.9999999999998}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.9999999999998}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 359.9999999999998}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2558.3999999999996, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.9999999999998}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2952., -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.9999999999998}], 
+     InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {3345.5999999999995, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.9999999999998}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3739.2, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.9999999999998}], 
+     TagBox[
+      InsetBox["", {4132.799999999999, -2164.7999999999997}, {
+       Center, Center}, {359.99999999999955, 359.9999999999998}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -2164.7999999999997}, {Center, Center}, {360., 359.9999999999998}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -2164.7999999999997}, {Center, Center}, {360., 359.9999999999998}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -2164.7999999999997}, {Center, Center}, {360., 359.9999999999998}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2558.3999999999996, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {2952., -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3345.5999999999995, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3739.2, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.99999999999955}], 
+     TagBox[
+      InsetBox["", {4132.799999999999, -2558.3999999999996}, {
+       Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -2558.3999999999996}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -2558.3999999999996}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -2558.3999999999996}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -2952.}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -2952.}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -2952.}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -2952.}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -2952.}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -2952.}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {2558.3999999999996, -2952.}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2952., -2952.}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.99999999999955}], 
+     TagBox[InsetBox["", {3345.5999999999995, -2952.}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3739.2, -2952.}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4132.799999999999, -2952.}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -2952.}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -2952.}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -2952.}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -3345.5999999999995}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -3345.5999999999995}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -3345.5999999999995}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -3345.5999999999995}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -3345.5999999999995}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {2164.7999999999997, -3345.5999999999995}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 359.99999999999955}], 
+     TagBox[
+      InsetBox["", {2558.3999999999996, -3345.5999999999995}, {
+       Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2952., -3345.5999999999995}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[
+      InsetBox["", {3345.5999999999995, -3345.5999999999995}, {
+       Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3739.2, -3345.5999999999995}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[
+      InsetBox["", {4132.799999999999, -3345.5999999999995}, {
+       Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -3345.5999999999995}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -3345.5999999999995}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -3345.5999999999995}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -3739.2}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -3739.2}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -3739.2}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -3739.2}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {1771.2, -3739.2}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -3739.2}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 359.99999999999955}], 
+     TagBox[InsetBox["", {2558.3999999999996, -3739.2}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2952., -3739.2}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3345.5999999999995, -3739.2}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3739.2, -3739.2}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4132.799999999999, -3739.2}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -3739.2}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -3739.2}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -3739.2}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -4132.799999999999}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -4132.799999999999}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -4132.799999999999}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {1377.6000000000001, -4132.799999999999}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -4132.799999999999}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -4132.799999999999}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 359.99999999999955}], 
+     TagBox[
+      InsetBox["", {2558.3999999999996, -4132.799999999999}, {
+       Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2952., -4132.799999999999}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[
+      InsetBox["", {3345.5999999999995, -4132.799999999999}, {
+       Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3739.2, -4132.799999999999}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[
+      InsetBox["", {4132.799999999999, -4132.799999999999}, {
+       Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -4132.799999999999}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -4132.799999999999}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -4132.799999999999}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -4526.4}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -4526.4}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {984.0000000000001, -4526.4}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -4526.4}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -4526.4}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -4526.4}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 360.}], 
+     TagBox[InsetBox["", {2558.3999999999996, -4526.4}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2952., -4526.4}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3345.5999999999995, -4526.4}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3739.2, -4526.4}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4132.799999999999, -4526.4}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -4526.4}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -4526.4}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -4526.4}, {Center, Center}, {360., 360.}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -4920.}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {590.4000000000001, -4920.}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -4920.}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -4920.}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], 
+     TagBox[InsetBox["", {1771.2, -4920.}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2164.7999999999997, -4920.}, {Center, Center}, {359.9999999999998, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2558.3999999999996, -4920.}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2952., -4920.}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3345.5999999999995, -4920.}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3739.2, -4920.}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4132.799999999999, -4920.}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -4920.}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -4920.}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -4920.}, {Center, Center}, {360., 360.}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {196.8, -5313.6}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -5313.6}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -5313.6}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -5313.6}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], 
+     TagBox[InsetBox["", {1771.2, -5313.6}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2164.7999999999997, -5313.6}, {Center, Center}, {359.9999999999998, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2558.3999999999996, -5313.6}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2952., -5313.6}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3345.5999999999995, -5313.6}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3739.2, -5313.6}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4132.799999999999, -5313.6}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -5313.6}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -5313.6}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -5313.6}, {Center, Center}, {360., 360.}],
+      "InsetString"]}}, {}},
+  Background->None,
+  ImageSize->Automatic,
+  PlotRangePadding->{6, 5}]], "Output",
+ CellChangeTimes->{3.885594364159871*^9},
+ CellLabel->"Out[68]=",ExpressionUUID->"8e23217c-2a14-437b-ba6a-6a2198208bec"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{"%68", ",", 
+   RowBox[{"Background", "\[Rule]", 
+    RowBox[{"Directive", "[", 
+     RowBox[{
+      RowBox[{"RGBColor", "[", 
+       RowBox[{"0.99`", ",", "0.`", ",", "0.02`"}], "]"}], ",", 
+      RowBox[{"Opacity", "[", "0.`", "]"}]}], "]"}]}]}], "]"}]], "Input",
+ NumberMarks->False,
+ CellLabel->"In[70]:=",ExpressionUUID->"15ac8a3e-e4cc-4c8b-ac1f-7356ca74e989"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2558.3999999999996, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2952., -196.8}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3345.5999999999995, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3739.2, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {4132.799999999999, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {4526.4, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {4920., -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {5313.6, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.00000000000006}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.00000000000006}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.00000000000006}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2558.3999999999996, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2952., -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3345.5999999999995, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3739.2, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {4132.799999999999, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {4526.4, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.00000000000006}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {4920., -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.00000000000006}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {5313.6, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.00000000000006}]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.0000000000002}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.0000000000002}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.0000000000002}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2558.3999999999996, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2952., -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3345.5999999999995, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3739.2, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {4132.799999999999, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {4526.4, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.0000000000002}], 
+     TagBox[InsetBox["", {4920., -984.0000000000001}, {Center, Center}, {360., 360.0000000000002}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -984.0000000000001}, {Center, Center}, {360., 360.0000000000002}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2558.3999999999996, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2952., -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3345.5999999999995, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3739.2, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {4132.799999999999, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {4526.4, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], 
+     TagBox[InsetBox["", {4920., -1377.6000000000001}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -1377.6000000000001}, {Center, Center}, {360., 360.}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2558.3999999999996, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2952., -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3345.5999999999995, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {3739.2, -1771.2}, ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}]
+      , 
+     TagBox[InsetBox["", {4132.799999999999, -1771.2}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -1771.2}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -1771.2}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -1771.2}, {Center, Center}, {360., 360.}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.9999999999998}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 359.9999999999998}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 359.9999999999998}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.9999999999998}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.9999999999998}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 359.9999999999998}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2558.3999999999996, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.9999999999998}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2952., -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.9999999999998}], 
+     InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {3345.5999999999995, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.9999999999998}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3739.2, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.9999999999998}], 
+     TagBox[
+      InsetBox["", {4132.799999999999, -2164.7999999999997}, {
+       Center, Center}, {359.99999999999955, 359.9999999999998}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -2164.7999999999997}, {Center, Center}, {360., 359.9999999999998}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -2164.7999999999997}, {Center, Center}, {360., 359.9999999999998}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -2164.7999999999997}, {Center, Center}, {360., 359.9999999999998}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2558.3999999999996, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {2952., -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3345.5999999999995, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3739.2, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.99999999999955}], 
+     TagBox[
+      InsetBox["", {4132.799999999999, -2558.3999999999996}, {
+       Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -2558.3999999999996}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -2558.3999999999996}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -2558.3999999999996}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -2952.}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -2952.}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -2952.}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -2952.}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -2952.}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -2952.}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {2558.3999999999996, -2952.}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2952., -2952.}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.99999999999955}], 
+     TagBox[InsetBox["", {3345.5999999999995, -2952.}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3739.2, -2952.}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4132.799999999999, -2952.}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -2952.}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -2952.}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -2952.}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -3345.5999999999995}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -3345.5999999999995}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -3345.5999999999995}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -3345.5999999999995}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -3345.5999999999995}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {2164.7999999999997, -3345.5999999999995}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 359.99999999999955}], 
+     TagBox[
+      InsetBox["", {2558.3999999999996, -3345.5999999999995}, {
+       Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2952., -3345.5999999999995}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[
+      InsetBox["", {3345.5999999999995, -3345.5999999999995}, {
+       Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3739.2, -3345.5999999999995}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[
+      InsetBox["", {4132.799999999999, -3345.5999999999995}, {
+       Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -3345.5999999999995}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -3345.5999999999995}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -3345.5999999999995}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -3739.2}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -3739.2}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -3739.2}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -3739.2}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {1771.2, -3739.2}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -3739.2}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 359.99999999999955}], 
+     TagBox[InsetBox["", {2558.3999999999996, -3739.2}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2952., -3739.2}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3345.5999999999995, -3739.2}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3739.2, -3739.2}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4132.799999999999, -3739.2}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -3739.2}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -3739.2}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -3739.2}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -4132.799999999999}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -4132.799999999999}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -4132.799999999999}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {1377.6000000000001, -4132.799999999999}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -4132.799999999999}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -4132.799999999999}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 359.99999999999955}], 
+     TagBox[
+      InsetBox["", {2558.3999999999996, -4132.799999999999}, {
+       Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2952., -4132.799999999999}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[
+      InsetBox["", {3345.5999999999995, -4132.799999999999}, {
+       Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3739.2, -4132.799999999999}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[
+      InsetBox["", {4132.799999999999, -4132.799999999999}, {
+       Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -4132.799999999999}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -4132.799999999999}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -4132.799999999999}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -4526.4}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -4526.4}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {984.0000000000001, -4526.4}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -4526.4}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -4526.4}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -4526.4}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 360.}], 
+     TagBox[InsetBox["", {2558.3999999999996, -4526.4}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2952., -4526.4}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3345.5999999999995, -4526.4}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3739.2, -4526.4}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4132.799999999999, -4526.4}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -4526.4}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -4526.4}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -4526.4}, {Center, Center}, {360., 360.}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -4920.}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {590.4000000000001, -4920.}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -4920.}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -4920.}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], 
+     TagBox[InsetBox["", {1771.2, -4920.}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2164.7999999999997, -4920.}, {Center, Center}, {359.9999999999998, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2558.3999999999996, -4920.}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2952., -4920.}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3345.5999999999995, -4920.}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3739.2, -4920.}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4132.799999999999, -4920.}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -4920.}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -4920.}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -4920.}, {Center, Center}, {360., 360.}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {196.8, -5313.6}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -5313.6}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -5313.6}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -5313.6}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], 
+     TagBox[InsetBox["", {1771.2, -5313.6}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2164.7999999999997, -5313.6}, {Center, Center}, {359.9999999999998, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2558.3999999999996, -5313.6}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2952., -5313.6}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3345.5999999999995, -5313.6}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3739.2, -5313.6}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4132.799999999999, -5313.6}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -5313.6}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -5313.6}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -5313.6}, {Center, Center}, {360., 360.}],
+      "InsetString"]}}, {}},
+  Background->Directive[
+    RGBColor[0.99, 0., 0.02], 
+    Opacity[0.]],
+  ImageSize->Automatic,
+  PlotRangePadding->{6, 5}]], "Output",
+ CellChangeTimes->{3.885594450124559*^9},
+ CellLabel->"Out[70]=",ExpressionUUID->"79f84396-d9f5-4678-a939-c1e01aaa2e3a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{
+  "\"\</Users/uwe/Desktop/majority_t6.png\>\"", ",", "%68", ",", 
+   "\"\<PNG\>\""}], "]"}]], "Input",
+ NumberMarks->False,
+ CellLabel->"In[69]:=",ExpressionUUID->"b1d7135d-706d-4101-920d-06ecac5144a3"],
+
+Cell[BoxData["\<\"/Users/uwe/Desktop/majority_t6.png\"\>"], "Output",
+ CellChangeTimes->{3.88559438455438*^9},
+ CellLabel->"Out[69]=",ExpressionUUID->"d895ffb3-bf5a-45a3-99d0-426ada0dc6d8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{"%65", ",", 
+   RowBox[{"Background", "\[Rule]", 
+    RowBox[{"Directive", "[", 
+     RowBox[{
+      RowBox[{"RGBColor", "[", 
+       RowBox[{"0.68`", ",", "0.79`", ",", "0.97`"}], "]"}], ",", 
+      RowBox[{"Opacity", "[", "0.`", "]"}]}], "]"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.885594306841357*^9, 3.885594308202105*^9}},
+ NumberMarks->False,
+ CellLabel->"In[66]:=",ExpressionUUID->"82ac3ba1-83f4-44e9-b483-9e7cc5abf627"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2558.3999999999996, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2952., -196.8}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3345.5999999999995, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3739.2, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {4132.799999999999, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {4526.4, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {4920., -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {5313.6, -196.8}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.00000000000006}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.00000000000006}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.00000000000006}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2558.3999999999996, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2952., -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3345.5999999999995, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3739.2, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {4132.799999999999, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.00000000000006}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {4526.4, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.00000000000006}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {4920., -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.00000000000006}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {5313.6, -590.4000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.00000000000006}]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.0000000000002}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.0000000000002}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.0000000000002}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2558.3999999999996, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2952., -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3345.5999999999995, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3739.2, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {4132.799999999999, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.0000000000002}], 
+     InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {4526.4, -984.0000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.0000000000002}], 
+     TagBox[InsetBox["", {4920., -984.0000000000001}, {Center, Center}, {360., 360.0000000000002}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -984.0000000000001}, {Center, Center}, {360., 360.0000000000002}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2558.3999999999996, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2952., -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3345.5999999999995, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3739.2, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {4132.799999999999, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {4526.4, -1377.6000000000001}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], 
+     TagBox[InsetBox["", {4920., -1377.6000000000001}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -1377.6000000000001}, {Center, Center}, {360., 360.}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2558.3999999999996, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2952., -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3345.5999999999995, -1771.2}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {3739.2, -1771.2}, ImageScaled[{0.5, 0.5}], {359.99999999999955, 360.}]
+      , 
+     TagBox[InsetBox["", {4132.799999999999, -1771.2}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -1771.2}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -1771.2}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -1771.2}, {Center, Center}, {360., 360.}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.9999999999998}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 359.9999999999998}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 359.9999999999998}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.9999999999998}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.9999999999998}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 359.9999999999998}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2558.3999999999996, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.9999999999998}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2952., -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.9999999999998}], 
+     InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {3345.5999999999995, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.9999999999998}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3739.2, -2164.7999999999997}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.9999999999998}], 
+     TagBox[
+      InsetBox["", {4132.799999999999, -2164.7999999999997}, {
+       Center, Center}, {359.99999999999955, 359.9999999999998}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -2164.7999999999997}, {Center, Center}, {360., 359.9999999999998}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -2164.7999999999997}, {Center, Center}, {360., 359.9999999999998}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -2164.7999999999997}, {Center, Center}, {360., 359.9999999999998}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0.5, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2558.3999999999996, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {2952., -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3345.5999999999995, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {3739.2, -2558.3999999999996}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.99999999999955}], 
+     TagBox[
+      InsetBox["", {4132.799999999999, -2558.3999999999996}, {
+       Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -2558.3999999999996}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -2558.3999999999996}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -2558.3999999999996}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -2952.}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -2952.}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -2952.}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -2952.}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -2952.}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 0, 1], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -2952.}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {2558.3999999999996, -2952.}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2952., -2952.}, 
+      ImageScaled[{0.5, 0.5}], {359.99999999999955, 359.99999999999955}], 
+     TagBox[InsetBox["", {3345.5999999999995, -2952.}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3739.2, -2952.}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4132.799999999999, -2952.}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -2952.}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -2952.}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -2952.}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -3345.5999999999995}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -3345.5999999999995}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -3345.5999999999995}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -3345.5999999999995}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -3345.5999999999995}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {2164.7999999999997, -3345.5999999999995}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 359.99999999999955}], 
+     TagBox[
+      InsetBox["", {2558.3999999999996, -3345.5999999999995}, {
+       Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2952., -3345.5999999999995}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[
+      InsetBox["", {3345.5999999999995, -3345.5999999999995}, {
+       Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3739.2, -3345.5999999999995}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[
+      InsetBox["", {4132.799999999999, -3345.5999999999995}, {
+       Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -3345.5999999999995}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -3345.5999999999995}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -3345.5999999999995}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -3739.2}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -3739.2}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -3739.2}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -3739.2}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {1771.2, -3739.2}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -3739.2}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 359.99999999999955}], 
+     TagBox[InsetBox["", {2558.3999999999996, -3739.2}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2952., -3739.2}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3345.5999999999995, -3739.2}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3739.2, -3739.2}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4132.799999999999, -3739.2}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -3739.2}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -3739.2}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -3739.2}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -4132.799999999999}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -4132.799999999999}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -4132.799999999999}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 359.99999999999955}], 
+     InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {1377.6000000000001, -4132.799999999999}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -4132.799999999999}, 
+      ImageScaled[{0.5, 0.5}], {360., 359.99999999999955}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -4132.799999999999}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 359.99999999999955}], 
+     TagBox[
+      InsetBox["", {2558.3999999999996, -4132.799999999999}, {
+       Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2952., -4132.799999999999}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[
+      InsetBox["", {3345.5999999999995, -4132.799999999999}, {
+       Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3739.2, -4132.799999999999}, {Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[
+      InsetBox["", {4132.799999999999, -4132.799999999999}, {
+       Center, Center}, {359.99999999999955, 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -4132.799999999999}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -4132.799999999999}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -4132.799999999999}, {Center, Center}, {360., 359.99999999999955}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -4526.4}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[0, 1, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -4526.4}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {984.0000000000001, -4526.4}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -4526.4}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1771.2, -4526.4}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {2164.7999999999997, -4526.4}, 
+      ImageScaled[{0.5, 0.5}], {359.9999999999998, 360.}], 
+     TagBox[InsetBox["", {2558.3999999999996, -4526.4}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2952., -4526.4}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3345.5999999999995, -4526.4}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3739.2, -4526.4}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4132.799999999999, -4526.4}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -4526.4}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -4526.4}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -4526.4}, {Center, Center}, {360., 360.}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {196.8, -4920.}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {590.4000000000001, -4920.}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -4920.}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -4920.}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], 
+     TagBox[InsetBox["", {1771.2, -4920.}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2164.7999999999997, -4920.}, {Center, Center}, {359.9999999999998, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2558.3999999999996, -4920.}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2952., -4920.}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3345.5999999999995, -4920.}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3739.2, -4920.}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4132.799999999999, -4920.}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -4920.}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -4920.}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -4920.}, {Center, Center}, {360., 360.}],
+      "InsetString"]}, {InsetBox[
+      GraphicsBox[
+       {GrayLevel[1], EdgeForm[{GrayLevel[0], Thickness[Large]}], 
+        RectangleBox[{0, 0}]}], {196.8, -5313.6}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {590.4000000000001, -5313.6}, 
+      ImageScaled[{0.5, 0.5}], {360.00000000000006, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {984.0000000000001, -5313.6}, 
+      ImageScaled[{0.5, 0.5}], {360.0000000000002, 360.}], InsetBox[
+      GraphicsBox[
+       {RGBColor[1, 0, 0], EdgeForm[{GrayLevel[0], Thickness[Tiny]}], 
+        DiskBox[{0, 0}]}], {1377.6000000000001, -5313.6}, 
+      ImageScaled[{0.5, 0.5}], {360., 360.}], 
+     TagBox[InsetBox["", {1771.2, -5313.6}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2164.7999999999997, -5313.6}, {Center, Center}, {359.9999999999998, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2558.3999999999996, -5313.6}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {2952., -5313.6}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3345.5999999999995, -5313.6}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {3739.2, -5313.6}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4132.799999999999, -5313.6}, {Center, Center}, {359.99999999999955, 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4526.4, -5313.6}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {4920., -5313.6}, {Center, Center}, {360., 360.}],
+      "InsetString"], 
+     TagBox[InsetBox["", {5313.6, -5313.6}, {Center, Center}, {360., 360.}],
+      "InsetString"]}}, {}},
+  Background->Directive[
+    RGBColor[0.68, 0.79, 0.97], 
+    Opacity[0.]],
+  ImageSize->Automatic,
+  PlotRangePadding->{6, 5}]], "Output",
+ CellChangeTimes->{
+  3.8855935225084667`*^9, {3.885594290650125*^9, 3.885594309446319*^9}},
+ CellLabel->"Out[66]=",ExpressionUUID->"4d851edf-d3e2-47c1-b1bd-facc6b4ed701"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{
+  "\"\</Users/uwe/Desktop/majority_t7.png\>\"", ",", "%66", ",", 
+   "\"\<PNG\>\""}], "]"}]], "Input",
+ NumberMarks->False,
+ CellLabel->"In[71]:=",ExpressionUUID->"38da7052-15d9-468c-8b95-c6fb8a8b12ed"],
+
+Cell[BoxData["\<\"/Users/uwe/Desktop/majority_t7.png\"\>"], "Output",
+ CellChangeTimes->{3.8855944699494267`*^9},
+ CellLabel->"Out[71]=",ExpressionUUID->"dd358eff-4bad-46cd-8dad-4af0aeb6e950"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{
+  "\"\</Users/uwe/Desktop/majority_t5.png\>\"", ",", "%66", ",", 
+   "\"\<PNG\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.885594315824152*^9, 3.8855943209994507`*^9}},
+ NumberMarks->False,
+ CellLabel->"In[67]:=",ExpressionUUID->"4b384658-e276-424b-99b0-0c52209d309c"],
+
+Cell[BoxData["\<\"/Users/uwe/Desktop/majority_t5.png\"\>"], "Output",
+ CellChangeTimes->{3.8855935800615396`*^9, 3.8855943221897984`*^9},
+ CellLabel->"Out[67]=",ExpressionUUID->"75f4ee9b-a3bf-44a7-8d23-f4448515e8c4"]
+}, Open  ]]
+},
+WindowSize->{1424, 911},
+WindowMargins->{{217, Automatic}, {Automatic, 203}},
+FrontEndVersion->"12.3 for Mac OS X ARM (64-bit) (June 24, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"22e4db81-2960-438f-951a-96f373321eb0"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 638, 16, 64, "Input",ExpressionUUID->"8655b382-22b9-4a39-bff6-ac4b0844ba3d"],
+Cell[1199, 38, 1604, 31, 64, "Input",ExpressionUUID->"5a0da9cb-2341-400f-8045-b72e14b9657c"],
+Cell[CellGroupData[{
+Cell[2828, 73, 635, 16, 37, "Input",ExpressionUUID->"d5f052fd-cd72-43d0-a124-1b5c247c01e3"],
+Cell[3466, 91, 4736, 98, 97, "Output",ExpressionUUID->"a1c3450b-c8d5-4d15-b2bc-ee7c3b9cb9d1"]
+}, Open  ]],
+Cell[8217, 192, 520, 13, 37, "Input",ExpressionUUID->"5f109f3e-a799-4d24-9402-48766698a86f"],
+Cell[8740, 207, 578, 15, 37, "Input",ExpressionUUID->"6c8e2d19-c688-464d-84e9-e397c79c932e"],
+Cell[9321, 224, 1661, 38, 142, "Input",ExpressionUUID->"3842eff6-1726-4882-ae2c-1039f8f8fad8"],
+Cell[CellGroupData[{
+Cell[11007, 266, 405, 9, 37, "Input",ExpressionUUID->"f91a8300-ed3f-4748-847f-a18c22845d25"],
+Cell[11415, 277, 5311, 140, 42, "Output",ExpressionUUID->"5cdaefd9-c0a0-4d2f-b3d2-34136e4a08e4"]
+}, Open  ]],
+Cell[16741, 420, 474, 11, 37, "Input",ExpressionUUID->"cb81ffd4-a98c-4d64-aa05-96cb6a9a2359"],
+Cell[CellGroupData[{
+Cell[17240, 435, 1101, 22, 90, "Input",ExpressionUUID->"2a207e29-e9ba-49f2-8afe-897629aacd25"],
+Cell[18344, 459, 37184, 700, 471, "Output",ExpressionUUID->"6ebfecd0-e891-43ab-8ab2-3061ea41dd51"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[55565, 1164, 224, 5, 37, "Input",ExpressionUUID->"def67c18-bc40-4589-a5a8-21bc9c6fd6ad"],
+Cell[55792, 1171, 36861, 696, 471, "Output",ExpressionUUID->"8e23217c-2a14-437b-ba6a-6a2198208bec"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[92690, 1872, 412, 10, 37, "Input",ExpressionUUID->"15ac8a3e-e4cc-4c8b-ac1f-7356ca74e989"],
+Cell[93105, 1884, 36915, 698, 471, "Output",ExpressionUUID->"79f84396-d9f5-4678-a939-c1e01aaa2e3a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[130057, 2587, 252, 6, 37, "Input",ExpressionUUID->"b1d7135d-706d-4101-920d-06ecac5144a3"],
+Cell[130312, 2595, 189, 2, 42, "Output",ExpressionUUID->"d895ffb3-bf5a-45a3-99d0-426ada0dc6d8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[130538, 2602, 480, 11, 37, "Input",ExpressionUUID->"82ac3ba1-83f4-44e9-b483-9e7cc5abf627"],
+Cell[131021, 2615, 36968, 699, 471, "Output",ExpressionUUID->"4d851edf-d3e2-47c1-b1bd-facc6b4ed701"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[168026, 3319, 252, 6, 37, "Input",ExpressionUUID->"38da7052-15d9-468c-8b95-c6fb8a8b12ed"],
+Cell[168281, 3327, 192, 2, 87, "Output",ExpressionUUID->"dd358eff-4bad-46cd-8dad-4af0aeb6e950"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[168510, 3334, 320, 7, 37, "Input",ExpressionUUID->"4b384658-e276-424b-99b0-0c52209d309c"],
+Cell[168833, 3343, 216, 2, 42, "Output",ExpressionUUID->"75f4ee9b-a3bf-44a7-8d23-f4448515e8c4"]
+}, Open  ]]
+}
+]
+*)
+

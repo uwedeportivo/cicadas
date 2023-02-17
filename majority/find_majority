@@ -1,0 +1,35 @@
+
+
+Given a set of marbles of different colors, find the majority color knowing it exists.
+
+Let M be the set of marbles. |M| = n.  We know that there is a color c such that |{ m in M: color(m) = c }| > n / 2.
+
+We prove the following lemma:
+
+---------------
+Given x, y in M with color(x) != color(y), then majority color in M is also the majority color in M \ {x, y}.
+
+Proof:
+
+Let red be the majority color in M and let's say k > n / 2 marbles have it.
+
+Case 1:
+
+color(x) != red, color(y) != red
+
+Then red appears k > n / 2 > (n - 2) / 2 times in M \ {x, y} too, so it is the majority color.
+
+Case 2:
+
+color(x) = red
+
+Then red appears k - 1 > n / 2 - 1 = (n - 2) / 2 times, so red is still the majority.
+-----------------
+
+Armed with the lemma we can do a recursive solution:
+
+majority(M, S) = 
+   case (x:xs, nil) -> majority(xs, x:nil)
+   case (x:xs, y:ys) with color(x) = color(y) -> majority(xs, x:y:ys)
+   case (x:xs, y:ys) with color(x) != color(y) -> majority(xs, ys) 
+   case (nil, y:ys) -> color(y)
