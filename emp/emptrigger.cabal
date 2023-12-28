@@ -1,0 +1,54 @@
+cabal-version:      3.0
+name:               emptrigger
+version:            0.1.0.0
+license:            MIT
+license-file:       LICENSE
+author:             Uwe Hoffmann
+maintainer:         uwedeportivo@vivaldi.net
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+
+common warnings
+    ghc-options: -Wall
+
+library
+    import:           warnings
+    exposed-modules:  EMPTrigger
+    build-depends:    base ^>=4.19.0.0, emptrigger-internal
+    hs-source-dirs:   src
+    default-language: Haskell2010
+
+library emptrigger-internal
+    import:           warnings
+    exposed-modules:  EMPTriggerInternal
+    build-depends:    base ^>=4.19.0.0, array, vector
+    hs-source-dirs:   internal
+    default-language: Haskell2010
+
+library examples
+    ghc-options: -Wno-unused-imports
+    exposed-modules:  Examples
+    build-depends:    base ^>=4.19.0.0, array, emptrigger-internal, emptrigger
+    hs-source-dirs:   examples
+    default-language: Haskell2010
+
+executable emptrigger
+    import:           warnings
+    main-is:          Main.hs
+    build-depends:
+        base ^>=4.19.0.0,
+        emptrigger
+    hs-source-dirs:   app
+    default-language: Haskell2010
+
+test-suite emptrigger-test
+    import:           warnings
+    default-language: Haskell2010
+    type:             exitcode-stdio-1.0
+    hs-source-dirs:   test
+    main-is:          Main.hs
+    build-depends:
+        base ^>=4.19.0.0,
+        emptrigger,
+        emptrigger-internal,
+        hspec
